@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gunasekaran S</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/mediaqury.css">
+</head>
+<body>
+    <div class="container">
+<!-- nav bar-->
+<nav>
+<div class="responsive_nav">
+ <div class="logo">
+    <ul>
+        <li><a href="#">Gunasekaran</a></li>
+    </ul>
+</div>
+<div class="links">
+    <ul id=" menulist">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Info</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Show me more</a></li>
+    </ul>
+</div> 
+</div>
+
+
+<div id="menuToggle">
+    <!--
+    A fake / hidden checkbox is used as click reciever,
+    so you can use the :checked selector on it.
+    -->
+    <input type="checkbox" id="menuCheckbox" />
+    
+    <!--
+    Some spans to act as a hamburger.
+    
+    They are acting like a real hamburger,
+    not that McDonalds stuff.
+    -->
+    <span></span>
+    <span></span>
+    <span></span>
+    
+    <!--
+    Too bad the menu has to be inside of the button
+    but hey, it's pure CSS magic.
+    -->
+    <ul id="menu">
+      <!-- 
+      We can use a label here to close upon click (when doing same page navigation), this
+      does require a slight bit of JS.
+      -->
+      <li>
+        <a href="#">
+          <label for="menuCheckbox" onclick="this.parentNode.click();">Home</label>
+        </a>
+      </li>
+      <li>
+        <a href="#about">
+          <label for="menuCheckbox" onclick="this.parentNode.click();">About</label>
+        </a>
+      </li>
+      
+      <!-- These just close the menu -->
+      <li><label for="menuCheckbox"><a>Info</a></label></li>
+      <li><label for="menuCheckbox"><a>Contact</a></label></li>
+      
+      <!-- Or just use regular URLs -->
+      <li>
+        <a href="#" target="_blank">Show me more</a>
+      </li>
+    </ul>
+  </div>
+
+</div>
+</nav>
+
+
+<!-- nav bar end-->
+
+
+<!-- first_content-->
+<div class="first_content">
+    <p>Hello, I'm</p>
+    <h1>Gunasekaran S</h1>
+    <h2>Fullstack Developer</h2>
+    <p id="para">Dedicated Full-Stack Developer with proficiency in HTML, CSS, JavaScript, React js, Python, Django etc. Strong focus on clean, efficient code and team collaboration.</p>
+   <div class="btn">
+    <button id="btn1">Download CV</button>
+    <button  id="btn2">Contact Info</button>
+   </div> 
+   <div class="social">
+    <a href="#"><img src="./imgs/github.png" alt="github"></a>
+    <a href="#"><img src="./imgs/linkedin.png" alt="github"></a>
+   </div>
+</div>
+
+<!-- first_content end-->
+
+
+<!-- marque_content-->
+<div class="align_marque">
+
+
+    <section class="logos container">
+        <div class="marquee">
+            <div class="track">
+                <img src="./imgs/html.png" alt="HTML" width="70" />
+                <img src="./imgs/css.png" alt="CSS" width="70" />
+                <img src="./imgs/javascript.png" alt="JS" width="70" />
+                <img src="./imgs/sass.png" width="70" alt="Sass" />
+                <img src="./imgs/react.png" width="70" alt="React" />
+                <!-- <img src="/assets/img/nextjs.png" width="128" alt="Next JS" /> -->
+                <!-- <img src="/assets/img/azure.png" width="128" alt="Azure" /> -->
+                <img src="./imgs/vscode.png" width="70" alt="VS Code" />
+                <img src="./imgs/python.png" width="70" alt="Python" />
+                <img src="./imgs/html.png" alt="HTML" width="70" />
+                <img src="./imgs/css.png" alt="CSS" width="70" />
+                <img src="./imgs/javascript.png" alt="JS" width="70" />
+                <img src="./imgs/sass.png" width="70" alt="Sass" />
+                <img src="./imgs/react.png" width="70" alt="React" />
+                <!-- <img src="/assets/img/nextjs.png" width="128" alt="Next JS" /> -->
+                <!-- <img src="/assets/img/azure.png" width="128" alt="Azure" /> -->
+                <img src="./imgs/vscode.png" width="70" alt="VS Code" />
+                <img src="./imgs/python.png" width="70" alt="Python" />
+            </div>
+        </div>
+    </section>
+
+
+
+<!-- <div class="marque_content">
+    <marquee direction="right to left"> <img style="height: 70px;" src="/assets/img/css.png"> &NonBreakingSpace; &NonBreakingSpace; &NonBreakingSpace; &NonBreakingSpace; &NonBreakingSpace; <img style="height: 70px;" src="/assets/img/html.png"> &NonBreakingSpace; &NonBreakingSpace; &NonBreakingSpace; &NonBreakingSpace; &NonBreakingSpace; <img style="height: 70px;" src="/assets/img/javascript.png"> &NonBreakingSpace; &NonBreakingSpace; &NonBreakingSpace; &NonBreakingSpace; &NonBreakingSpace; <img style="height: 70px;" src="/assets/img/nextjs.png"> &NonBreakingSpace; &NonBreakingSpace; &NonBreakingSpace; &NonBreakingSpace; &NonBreakingSpace; <img style="height: 70px;" src="/assets/img/python.png"> &NonBreakingSpace; &NonBreakingSpace; &NonBreakingSpace; &NonBreakingSpace; &NonBreakingSpace; <img style="height: 70px;" src="/assets/img/react.png"> &NonBreakingSpace; &NonBreakingSpace; &NonBreakingSpace; &NonBreakingSpace; &NonBreakingSpace; <img style="height: 70px;" src="/assets/img/sass.png"> &NonBreakingSpace; &NonBreakingSpace; &NonBreakingSpace; &NonBreakingSpace; &NonBreakingSpace; <img style="height: 70px; width: 63px;" id="vscode" src="/assets/img/vscode.png"> </marquee>
+</div> -->
+<div class="domy">
+
+</div>
+</div>
+
+
+<!-- marque_content end-->
+
+
+
+
+<!-- Skills-->
+<div class="my_skills">
+
+    <p>About Me</p>
+    <h1>Skills</h1>
+<div class="skill_box">
+    <div class="soft_skill">
+        <h2>Frontend</h2>
+        <p class="fskill">HTML</p>
+        <p class="fskill">CSS</p>
+        <p class="fskill">JavaScript</p>
+        <p class="fskill">React</p>
+        <h2>Backend</h2>
+        <p class="sskill">Python</p>
+        <p class="sskill">Django</p>
+        <p class="sskill">PHP</p>
+        <p class="sskill">Sql</p>
+    </div>
+
+    <div class="about">
+        <h2>A bit about me</h2>
+        <p> Well-qualified Full Stack Developer familiar with wide range of programming utilities and languages. Knowledgeable of
+            backend and frontend development requirements. Handles any part of process with ease. Collaborative team player with
+            excellent technical abilities</p>
+    </div>
+</div>
+</div>
+
+
+
+
+
+<!-- Skills end-->
+
+
+
+
+<!-- Projects-->
+
+<div class="projects">
+
+<p>Browse My Recent</p>
+<h1>Projects</h1>
+<div class="project_align">
+<div class="project1">
+    <img src="./imgs/project-1.png" alt="project1">
+    <h2>Project One</h2>
+    <div class="project_btn">
+        <button id="btn1">Github</button>
+        <button id="btn2">Live Demo</button>
+    </div>
+</div>
+
+<div class="project2">
+    <img src="./imgs/project-2.png" alt="project1">
+    <h2>Project Two</h2>
+    <div class="project_btn">
+        <button id="btn1">Github</button>
+        <button id="btn2">Live Demo</button>
+    </div>
+</div>
+</div>
+</div>
+<!-- Projects end-->
+
+
+
+<!-- contact  -->
+<div class="contact">
+    <h1>Contact Me</h1>
+    <p>Get in touch</p>
+    <div class="cont">
+        <div class="call">
+            <h3>Call Me</h3>
+            <p><a href="#">+91 6369815269</a></p>
+        </div>
+        <div class="Location">
+            <h3>Location</h3>
+            <p><a href="#">Virudhunagar,Tamilnadu</a></p>
+        </div>
+        <div class="Email">
+            <h3>Email</h3>
+            <p><a href="#">mks.gunasekaran@gmail.com</a></p>
+        </div>
+    </div>
+</div>
+
+<!-- contact end -->
+
+
+
+<footer>
+
+
+<p>Made By ❤ Gunasekaran S</p>
+
+
+</footer>
+
+    </div>
+
+
+    <script src="/javascript/script.js"></script>
+</body>
+</html>

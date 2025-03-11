@@ -1,0 +1,532 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    font-family: "Poppins", sans-serif;
+    background-color: rgb(237, 242, 248);
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+
+
+
+
+
+
+
+
+
+
+  #menuToggle
+  {
+    display: block;
+    /* You can also use relative/absolute here if you want to stay on the top */
+    position: fixed;
+    top: 50px;
+    left: 50px;
+    
+    z-index: 1;
+    
+    -webkit-user-select: none;
+    user-select: none;
+  }
+  
+  #menuToggle a
+  {
+    text-decoration: none;
+    color: #232323;
+    
+    transition: color 0.3s ease;
+  }
+  
+  #menuToggle a:hover
+  {
+    color: tomato;
+  }
+  
+  
+  #menuToggle input
+  {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    
+    cursor: pointer;
+    
+    opacity: 0; /* hide this */
+    z-index: 2; /* and place it over the hamburger */
+    
+    -webkit-touch-callout: none;
+  }
+  
+  /*
+   * Just a quick hamburger
+   */
+  #menuToggle span
+  {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    
+    background:  rgb(237, 242, 248);
+    border-radius: 3px;
+    
+    z-index: 1;
+    
+    transform-origin: 4px 0px;
+    
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                opacity 0.55s ease;
+  }
+  
+  #menuToggle span:first-child
+  {
+    transform-origin: 0% 0%;
+  }
+  
+  #menuToggle span:nth-last-child(2)
+  {
+    transform-origin: 0% 100%;
+  }
+  
+  /* 
+   * Transform all the slices of hamburger
+   * into a crossmark.
+   */
+  #menuToggle input:checked ~ span
+  {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #232323;
+  }
+  
+  /*
+   * But let's hide the middle one.
+   */
+  #menuToggle input:checked ~ span:nth-last-child(3)
+  {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+  
+  /*
+   * Ohyeah and the last one should go the other direction
+   */
+  #menuToggle input:checked ~ span:nth-last-child(2)
+  {
+    transform: rotate(-45deg) translate(0, -1px);
+  }
+  
+  /*
+   * Make this absolute positioned
+   * at the top left of the screen
+   */
+  #menu
+  {
+    position: absolute;
+    max-width: 400px;
+    width: 100vw;
+    max-height: 100vh;
+    margin: -100px 0 0 -50px;
+    padding: 50px;
+    padding-top: 125px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    background: #ededed;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    /* to stop flickering of text in safari */
+    
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+    
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+  }
+  
+  #menu li
+  {
+    padding: 10px 0;
+    font-size: 22px;
+  }
+  
+  #menu li label
+  {
+    cursor: pointer;
+  }
+  
+  /*
+   * And let's slide it in from the left
+   */
+  #menuToggle input:checked ~ ul
+  {
+    transform: none;
+  }
+
+
+
+
+
+
+
+
+
+
+
+ .responsive_nav{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 10vh;
+    background-color : rgb(238, 243, 248);
+    box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
+    transition: 0.3s;
+  } 
+
+  /* .responsive_nav{
+    display: none;
+  } */ 
+  .links ul{
+    display: flex;
+    gap: 30px;
+    padding-right: 100px;
+    width: 100%;
+  }
+  ul li{
+    list-style: none;
+
+  }
+  ul li a{
+    text-decoration: none;
+    color: rgb(38, 38, 40);
+  }
+.logo ul{
+    padding-left: 100px;
+    width: 100%;
+}
+nav ul li :hover{
+    color: rgb(35, 35, 255);
+    transition: 0.5s;
+}
+.first_content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 170px;
+}
+#para{
+    width: 600px;
+    text-align: center;
+    color: rgb(94, 94, 94);
+}
+.first_content h1{
+    color:  rgb(35, 35, 255);
+    cursor: pointer;
+}
+.first_content h1:hover{
+    color:rgb(50, 49, 49);
+    transition: 0.5s;
+}
+.first_content h2{
+    font-weight:600;
+}
+.btn{
+    display: flex;
+    gap: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.btn button{
+    width: 150px;
+    height: 50px;
+    border-radius: 30px;
+    border-style: none;
+    cursor: pointer;
+}
+#btn1{
+    background-color: white;
+    border: 2px solid black;
+    font-weight: 600;
+}
+#btn1:hover{
+    background-color: rgb(50, 49, 49);
+    color: white;
+    transition: 0.5s;
+    
+}
+#btn2{
+    background-color: rgb(50, 49, 49);
+    color: white;
+    font-weight: 600;
+}
+#btn2:hover{
+    background-color: black;
+}
+.social{
+    display: flex;
+    gap: 20px;
+}
+.social img{
+    width: 35px;
+}
+
+#vscode{
+    width: 110px;
+}
+.align_marque{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.marquee {
+    margin-top: 69px;
+    height: 50px;
+    overflow: hidden;
+    position: relative;
+    background: #fefefe;
+    color: #333;
+    border: 1px solid #4a4a4a;
+}
+
+ .logos {
+	background-color: var(--base-100);
+	border-radius:30px;
+	padding:30px 0px;
+	@media (max-width:1440px){
+		border-radius:0px;
+	}
+	.marquee {
+        
+        padding-top: 10px;
+		width:67vw;
+        border-radius: 20px;
+		max-width:100%;
+		height:80px;
+		overflow:hidden;
+		position:relative;
+		.track {
+			position:absolute;
+			white-space:nowrap;
+			will-change:transform;
+			animation: marquee 40s linear infinite;
+			display:flex;
+			gap:10px;
+		}
+	}
+}
+
+@keyframes marquee {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(-50%);
+	}
+}
+
+
+
+/* .marque_content{
+    border: 2px solid rgba(74, 73, 73, 0.228);
+    background-color:rgb(238, 243, 248) ;
+    width: 800px;
+    border-radius: 30px;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+.marque_content marquee{
+    height: 80px;
+    padding: 10px;
+} */
+/* marquee{
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    -moz-animation: scroll-left 0.5s linear infinite;
+    -webkit-animation: scroll-left 0.5s linear infinite;
+  animation: scroll-left 05s linear infinite;
+} */
+
+
+.my_skills{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.skill_box{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(139, 224, 253, 0.434);
+    box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
+    width: 800px;
+    height: 300px;
+    border-radius: 20px;
+    margin-bottom: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.soft_skill{
+    width: 200px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.about{
+    width: 500px;
+}
+.fskill{
+    color: rgb(95, 90, 90);
+    text-align: center;
+    width: 100px;
+}
+.sskill{
+    color: rgb(95, 90, 90);
+    text-align: center;
+    width: 100px;
+}
+.soft_skill h2{
+    color: rgb(35, 35, 255);
+}
+.about h2{
+    color: rgb(35, 35, 255);
+}
+.about p{
+    color:  rgb(95, 90, 90);
+}
+
+
+.projects{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.project_align{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-top: 20px;
+}
+
+.project1{
+    border: 2px solid rgba(0, 0, 0, 0.386);
+    border-radius: 30px;
+    width: 400px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.project2{
+    border: 2px solid rgba(0, 0, 0, 0.386);
+    border-radius: 30px;
+    width: 400px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.project1 img{
+    width: 300px;
+    border-radius: 30px;
+}
+.project2 img{
+    width: 300px;
+    border-radius: 30px;
+}
+.project_btn button{
+    width: 120px;
+    height: 35px;
+    border-radius: 20px;
+    margin-top: 10px;
+}
+
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+.cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+.call{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+.Location{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+.Email{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+.call p a{
+    text-decoration: none;
+    color: rgb(54, 54, 254);
+}
+.Location p a{
+    text-decoration: none;
+    color: rgb(54, 54, 254);
+}
+.Email p a{
+    text-decoration: none;
+    color: rgb(54, 54, 254);
+}
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(94, 94, 252);
+    height: 50px;
+    color: white;
+    width: 100%;
+    
+}
